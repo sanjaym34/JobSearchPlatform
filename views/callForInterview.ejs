@@ -1,0 +1,39 @@
+<%- include('partials/header2') -%>
+
+<h1> This is Call for Interview Page </h1>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title"> Candidate Name: <%= foundEmployee.firstName + " " + foundEmployee.lastName %></h5>
+                <br> <br> 
+                <h5 class="card-title"> Applied for job at <%= foundEmployee.city %> </h5>
+            </div>
+        </div>
+        <br>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title"> About the Candidate </h5>
+                <p class="card-text"><%= foundEmployee.aboutCandidate %></p>
+                <br> <br>
+                <h5 class="card-title"> Qualifications </h5>
+                <p class="card-text"><%= foundEmployee.Qualification %></p>
+                <br> <br>
+                <h5 class="card-title"> Skills </h5>
+                <p class="card-text"><%= foundEmployee.skills %></p>
+                <br> <br>
+                <a href="/download/<%= foundEmployee._id %>" class="btn btn-primary"> Download Resume </a>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+
+<form action="/callForInterview/<%= foundEmployee._id %>" method="POST">
+    <button type="submit" class="btn btn-primary"> SUBMIT </button>
+</form>
+
+<%- include('partials/footer') -%>

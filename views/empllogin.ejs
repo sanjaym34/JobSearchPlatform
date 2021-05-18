@@ -1,0 +1,35 @@
+<%- include('partials/header') -%>
+
+    <h1> Employer Login </h1>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-sm-12 col-md-8">
+
+            <div class="card">
+                <div class="card-body signin-card">
+                    <form action="/empllogin" method="POST" class="signin-form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username</label>
+                            <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary"> SignIn </button>
+                    </form>
+                    <a href="/emplregister" class="createNewAccount">New to AccuJob? Register for free</a>
+                    <br>
+                    <a href="/forgotPasswordEmpl" class="forgotPassword">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+    <%- include('partials/footer') -%>

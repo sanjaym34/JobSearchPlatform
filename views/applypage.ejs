@@ -1,0 +1,39 @@
+<%- include('partials/header2') -%>
+
+<h2> <%= foundEmployer.jobTitle %> at <%= foundEmployer.companyName %> </h2>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="card-body">
+                    <h5 class="card-title"> Job Title: <%= foundEmployer.jobTitle %> </h5>
+                    <br>
+                    <h5 class="card-title"> Company Name: <%= foundEmployer.companyName %>  </h5>
+                    <br>
+                    <h5 class="card-title"> Pay/Month:  <%= foundEmployer.Salary %>  </h5>
+                    <br>
+                    <h5 class="card-title"> Percentage Chances of Recruitment:  <%= foundEmployer.percentage %> %  </h5>
+                </div>   
+            </div>
+        </div>
+        <br>
+
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title"> About the Company </h5>
+                <p class="card-text"> <%= foundEmployer.jobDescription  %> </p>
+                <br> 
+                <h5 class="card-title"> Skills required for the job </h5>
+                <p class="card-text"> <%= foundEmployer.skillsRequired  %> </p>
+                <a href="/resumeUploadPage/<%= foundEmployer._id %>" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+
+
+<%- include('partials/footer') -%>

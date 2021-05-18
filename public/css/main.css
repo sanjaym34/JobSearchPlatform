@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.card-body.signin-card{
+    padding:40px 0px 20px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.card.text-center.generalCard{
+    padding: 5px 5px 5px 5px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    width: 500px;
+}
+
+button{
+    color: #ffffff;
+    background-color: #0000ff;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    display: block;
+    margin: auto
+}
+
+form.signin-form{
+    max-width: 350px;
+    margin: auto;
+}
+
+form.upload{
+    display: block;
+    margin: auto
+}
+
+a.createNewAccount {
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    margin: 15px;
+}
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

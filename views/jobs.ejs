@@ -1,0 +1,27 @@
+<%- include('partials/header') -%>
+
+<h1> JOBS </h1>
+
+<% eachEmployer.forEach( employer => { %>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title"> <%= employer.companyName %> </h5>
+                <br>
+                <p class="card-text"> Location: <%= employer.city %> </p>
+                <br>
+                <p class="card-text"> Phone Number: <%= employer.phoneNumber %> </p>
+            </div>
+            <br> 
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+<br>
+
+<% }); %>
+
+<%- include('partials/footer') -%>

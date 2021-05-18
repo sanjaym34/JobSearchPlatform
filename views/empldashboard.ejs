@@ -1,0 +1,28 @@
+<%- include('partials/header2') -%>
+
+<h1> This is the Employer Dashboard </h1>
+
+<% eligible.forEach(employee =>{ %>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Candidate Name: <%= employee.firstName + " " + employee.lastName %> </h5>
+                <br> 
+                <h5 class="card-title">Skills: <%= employee.skills %> </h5>
+                <br>
+                <h5 class="card-title">Qualifications: <%= employee.Qualification %> </h5>
+                <a href="/callForInterview/<%=employee._id%>" class="btn btn-primary"> View Details </a>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br> 
+
+<% }); %>
+
+<%- include('partials/footer') -%>

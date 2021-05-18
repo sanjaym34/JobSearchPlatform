@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+
+<h1> Jobs in Hyderabad </h1>
+
+<% foundEmployer.forEach(function(eachEmployer){ %>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title"> Job Title: <%= eachEmployer.jobTitle %> </h5>
+                <br> <br> 
+                <h5 class="card-title">Company Name: <%= eachEmployer.companyName %>  </h5>
+                <br> <br>
+                <h5 class="card-title"> Pay/Month:  <%= eachEmployer.Salary %>  </h5>
+                <br> <br>
+                <h5 class="card-title"> Last Date to apply is  <%= eachEmployer.lastDateToApply %>  </h5>
+                <a href="/emplogin" class="btn btn-primary"> View Details </a>
+            </div>
+        </div>  
+    </div>
+    <div class="col"></div>
+</div>
+<br>
+<% }) %>
+
+<%- include('partials/footer') -%>
