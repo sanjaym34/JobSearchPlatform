@@ -19,7 +19,7 @@ var express = require("express"),
     methodOverride = require('method-override'),
     session = require('express-session')
 
-mongoose.connect('mongodb://localhost:27017/SEMProject', {
+mongoose.connect('mongodb://localhost:27017/JobSearchPlatform', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -50,10 +50,10 @@ app.use(session({
 app.use(flash());
 app.use(upload());
 
-const CLIENT_ID = '558660513980-fobiv014sv295n9eotbhtk90ikfgi9ve.apps.googleusercontent.com';
-const CLEINT_SECRET = 'oNlFa8TZfG-E9iXSIMCnT9Vl';
+const CLIENT_ID = 'your_client_id';
+const CLEINT_SECRET = 'your_client_secret';
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-const REFRESH_TOKEN = '1//04V_LsI7XB5WuCgYIARAAGAQSNwF-L9IrhoUed5WyLujWST1CyWusJ8rTUY9iGgPFHqgYZWstEDuerp03a0ugmIEtB4i29kbxk7w';
+const REFRESH_TOKEN = 'your_refresh_token';
 
 const oAuth2Client = new google.auth.OAuth2(
     CLIENT_ID,
