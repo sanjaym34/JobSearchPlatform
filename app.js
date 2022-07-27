@@ -19,17 +19,32 @@ var express = require("express"),
     methodOverride = require('method-override'),
     session = require('express-session')
 
-mongoose.connect('mongodb://localhost:27017/JobSearchPlatform', {
+// mongoose.connect('mongodb://localhost:27017/JobSearchPlatform', {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true
+// });
+
+// const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "connection error:"));
+// db.once("open", () => {
+//     console.log("Database connected");
+// });
+
+const url = `mongodb+srv://sanjaym20:Sanjay12345@sanjaycluster.0ihte.mongodb.net/JobSearchPlatform?retryWrites=true&w=majority`;
+
+const connectionParams={
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
-});
-
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => {
-    console.log("Database connected");
-});
+    useUnifiedTopology: true 
+}
+mongoose.connect(url,connectionParams)
+    .then( () => {
+        console.log('Connected to database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. \n${err}`);
+    })
 
 const app = express();
 
