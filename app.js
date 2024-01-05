@@ -32,7 +32,7 @@ var express = require("express"),
 //     console.log("Database connected");
 // });
 
-const url = `mongodb+srv://sanjaym20:Sanjay12345@sanjaycluster.0ihte.mongodb.net/JobSearchPlatform?retryWrites=true&w=majority`;
+const url = `mongodb+srv://username:password@sanjaycluster.0ihte.mongodb.net/JobSearchPlatform?retryWrites=true&w=majority`;
 
 const connectionParams={
     useNewUrlParser: true,
